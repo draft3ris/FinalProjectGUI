@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="562.0" prefWidth="551.0" spacing="20.0" style="-fx-background-image: url('background.jpeg');" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minigame.MiniGameController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Label fx:id="lifeLabel" contentDisplay="CENTER" prefHeight="51.0" prefWidth="59.0" text="LIFE" textAlignment="CENTER">
+            <font>
+               <Font size="24.0" />
+            </font>
+         </Label>
+         <ImageView fx:id="heart1" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../heart.jpeg" />
+            </image>
+         </ImageView>
+         <ImageView fx:id="heart2" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../heart.jpeg" />
+            </image>
+         </ImageView>
+         <ImageView fx:id="heart3" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../../heart.jpeg" />
+            </image>
+         </ImageView>
+         <Label fx:id="scoreLabel" alignment="CENTER" contentDisplay="CENTER" prefHeight="49.0" prefWidth="300" text="SCORE: " textAlignment="CENTER">
+            <font>
+               <Font size="24.0" />
+            </font>
+         </Label>
+      </children></HBox>
+   <HBox prefHeight="100.0" prefWidth="200.0">
+      <children>
+         <Button fx:id="upDownButton" mnemonicParsing="false" onAction="#onUpDownButtonClick" onMouseClicked="#onUpDownButtonClick" prefHeight="100" prefWidth="155" style="-fx-background-color: pink;" text="UpDown">
+            <HBox.margin>
+               <Insets left="10.0" />
+            </HBox.margin>
+            <font>
+               <Font size="15.0" />
+            </font></Button>
+         <Button fx:id="rockScissorsPaper" mnemonicParsing="false" onMouseClicked="#onRockScissorsPaperButtonClick" prefHeight="100" prefWidth="155" style="-fx-background-color: pink;" text="RockScissorsPaper">
+            <HBox.margin>
+               <Insets left="10.0" />
+            </HBox.margin>
+            <font>
+               <Font size="15.0" />
+            </font></Button>
+         <Button fx:id="WASDButton" mnemonicParsing="false" onMouseClicked="#onWASDButtonClick" prefHeight="100" prefWidth="155" style="-fx-background-color: pink;" text="WASD">
+            <HBox.margin>
+               <Insets left="10.0" />
+            </HBox.margin>
+            <font>
+               <Font size="15.0" />
+            </font></Button>
+      </children>
+   </HBox>
+   <Label fx:id="descriptionLabel" ellipsisString="" style="-fx-background-color: #FFC1CC;" text="Label" textOverrun="CLIP" wrapText="true">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Label>
+   <Button fx:id="playButton" mnemonicParsing="false" onMouseClicked="#onPlayButtonClicked" text="PLAY">
+      <font>
+         <Font size="20.0" />
+      </font>
+   </Button>
+</VBox>

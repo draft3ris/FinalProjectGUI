@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="562.0" prefWidth="551.0" spacing="20.0" style="-fx-background-color: pink;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.minigame.RockScissorsPaperController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <ImageView fx:id="resultImageView" fitHeight="97.0" fitWidth="202.0" pickOnBounds="true" preserveRatio="true">
+      <image>
+         <Image url="@../../../rsp.jpeg" />
+      </image></ImageView>
+   <SplitPane fx:id="choiceScreen" dividerPositions="0.30823863636363635, 0.671875" orientation="VERTICAL" prefHeight="555.0" prefWidth="511.0">
+     <items>
+       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="127.0" prefWidth="509.0">
+            <children>
+               <ImageView fx:id="rockImageView" fitHeight="100.0" fitWidth="120.0" layoutX="49.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../rock.jpeg" />
+                  </image></ImageView>
+               <Button fx:id="rockButton" layoutX="395.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#rockButtonClicked" prefHeight="97.0" prefWidth="100.0" text="Rock" />
+            </children></AnchorPane>
+         <AnchorPane prefHeight="124.0" prefWidth="509.0">
+            <children>
+               <ImageView fx:id="scissorsImageView" fitHeight="100.0" fitWidth="120.0" layoutX="51.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../scissors.jpeg" />
+                  </image></ImageView>
+               <Button fx:id="scissorsButton" layoutX="395.0" layoutY="24.0" mnemonicParsing="false" onMouseClicked="#scissorsButtonClicked" prefHeight="97.0" prefWidth="100.0" text="Scissors" />
+            </children></AnchorPane>
+       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="509.0">
+            <children>
+               <ImageView fx:id="paperImageView" fitHeight="100.0" fitWidth="120.0" layoutX="51.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+                  <image>
+                     <Image url="@../../../paper.jpeg" />
+                  </image></ImageView>
+               <Button fx:id="paperButton" layoutX="395.0" layoutY="12.0" mnemonicParsing="false" onMouseClicked="#paperButtonClicked" prefHeight="97.0" prefWidth="100.0" text="Paper" />
+            </children></AnchorPane>
+     </items>
+   </SplitPane>
+   <Button fx:id="homeButton" mnemonicParsing="false" onMouseClicked="#onHomeButtonClicked" text="back to home">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Button>
+</VBox>
